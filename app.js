@@ -23,12 +23,12 @@ alert(r); */
 
 // let num = prompt('Ingrese un numero: ');
 
-let numeroSecreto = Math.floor(Math.random()*10+1);
+let numeroSecreto = Math.floor(Math.random()*10+1); // SI SE QUIERE AUMENTAR EL NUMERO A ADIVINAR, SE MULTIPLICA POR 100 O POR 1000
 console.log(numeroSecreto);
 let numeroUsuario;
 let x = 1;
 let veces = 'intento';
-let limite = prompt('INGRESA LA CANTIDAD DE INTENTOS A REALIZAR: ');
+let limite = parseInt(prompt('INGRESA LA CANTIDAD DE INTENTOS A REALIZAR: '));
 while (numeroUsuario != numeroSecreto) {
     console.log(numeroUsuario);
     numeroUsuario = prompt('Digita un numero: ');
