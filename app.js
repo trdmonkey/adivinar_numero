@@ -23,17 +23,18 @@ alert(r); */
 
 // let num = prompt('Ingrese un numero: ');
 
-let numeroSecreto = 6;
-// alert('Hola Mundo');
+let numeroSecreto = Math.floor(Math.random()*10+1);
+console.log(numeroSecreto);
 let numeroUsuario;
 let x = 1;
 let veces = 'intento';
+let limite = prompt('INGRESA LA CANTIDAD DE INTENTOS A REALIZAR: ');
 while (numeroUsuario != numeroSecreto) {
     console.log(numeroUsuario);
     numeroUsuario = prompt('Digita un numero: ');
 
     if(numeroUsuario == numeroSecreto) {
-        alert(`ACERTASTE!! con ${x} ${veces}`);
+        alert(`ACERTASTE!! con ${x} ${x==1?'intento':'intentos'}`);
         
     } else {
         // alert('Fallaste');
@@ -42,8 +43,14 @@ while (numeroUsuario != numeroSecreto) {
         } else {
             alert('es mayor');
         }
+        // x = x + 1;
+        // x += 1;
         x++;
         veces = 'intentos';
+        if(x > limite) {
+            alert('Limite de intentos permitido!! Adios.');
+            break;
+        }
     }
     
 }
